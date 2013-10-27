@@ -7,10 +7,13 @@
   <groupId>org.mpilone</groupId>
   <artifactId>helmsman</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
 
   <name>Helmsman</name>
-  <description>Core process management application.</description>
+  <description>Helmsman is a simple process control application 
+    that can be used to control a set of services. Helmsman strives 
+    to be extremely simple, reliable, and easy to deploy.
+  </description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -68,5 +71,24 @@
       </plugin>
     </plugins>
   </build>
+  
+  <distributionManagement>
+    <!-- Use 
+      -DaltDeploymentRepository=mpilone-snapshots::default::file:///Users/.../mvn-repo/snapshots 
+      when deploying locally.
+      
+      Refer to http://cemerick.com/2010/08/24/hosting-maven-repos-on-github/
+    -->
+    <repository>
+      <id>mpilone-releases</id>
+      <name>GitHub MVN Repository Releases</name>
+      <url>https://github.com/mpilone/mvn-repo/raw/master/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>mpilone-snapshots</id>
+      <name>GitHub MVN Repository Snapshots</name>
+      <url>https://github.com/mpilone/mvn-repo/raw/master/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
   
 </project>
