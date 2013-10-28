@@ -98,3 +98,7 @@ And then adding the dependency:
         <artifactId>helmsman</artifactId>
         <version>1.0.0</version>
     </dependency>
+
+You can also just grab the full, executeable helmsman-1.0.0-jar-with-dependencies.jar archive and run it immediately as a standalone application from [mpilone/mvn-repo](https://github.com/mpilone/mvn-repo/tree/master/releases/org/mpilone/helmsman/) with a command like:
+
+    java -jar helmsman-1.0.0-jar-with-dependencies.jar -h
